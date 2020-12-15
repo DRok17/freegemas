@@ -6,6 +6,7 @@
 #include "go_music.h"
 
 #include "BaseButton.h"
+#include "State.h"
 
 #include <string>
 
@@ -17,7 +18,7 @@ class GameIndicators
 public:
     GameIndicators();
 
-    void setGame(Game *, StateGame *);
+    void setGame(Game *, State *);
 
     void loadResources();
 
@@ -42,7 +43,7 @@ private:
     void regenerateScoreTexture();
 
     Game * mGame;
-    StateGame * mStateGame;
+    State * mStateGame;
 
     /// Current score
     int mScore = 0;

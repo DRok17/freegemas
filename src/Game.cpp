@@ -4,6 +4,7 @@
 #include "StateMainMenu.h"
 #include "StateHowToPlay.h"
 #include "StateGame.h"
+#include "StateGameEndless.h"
 
 
 Game::Game ()
@@ -77,6 +78,11 @@ void Game::changeState(string S)
     {
         mCurrentState = std::make_shared<StateGame>(this);
         mCurrentStateString = "estadoGame";
+    }
+    else if(S == "stateGameEndless")
+    {
+        mCurrentState = std::make_shared<StateGameEndless>(this);
+        mCurrentStateString = "estadoGameEndless";
     }
     else if(S == "stateHowtoplay")
     {

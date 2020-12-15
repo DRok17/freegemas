@@ -11,7 +11,7 @@ GameIndicators::GameIndicators() :
 
 }
 
-void GameIndicators::setGame (Game * g, StateGame * sg)
+void GameIndicators::setGame (Game * g, State * sg)
 {
     mGame = g;
     mStateGame = sg;

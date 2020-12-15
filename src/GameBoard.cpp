@@ -215,7 +215,7 @@ void GameBoard::update()
         }
     }
 
-    // The entire board is disappearing to show a new one
+    // The entire board is disappearing because the game is ending
     else if (mState == eBoardDisappearing)
     {
         // Update the animation frame
@@ -227,11 +227,8 @@ void GameBoard::update()
             // Reset animation counter
             mAnimationCurrentStep = 0;
 
-            // Generate a brand new board
-            mBoard.generate();
-
             // Switch state
-            mState = eBoardAppearing;
+            mState = eTimeFinished;
         }
     }
 

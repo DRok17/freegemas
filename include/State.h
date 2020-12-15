@@ -55,6 +55,11 @@ public:
 
     /// Default destructor
     virtual ~State();
+
+protected:
+    void showHint();
+
+
 };
 
 #endif /* _STATE_H_ */
